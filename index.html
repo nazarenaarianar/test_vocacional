@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>¿Querés una ayuda para definir tu futuro? · Test vocacional</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      try {
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("riasec_theme") === "dark" ? "dark" : "light");
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div class="theme" role="group" aria-label="Tema de color">
+      <button type="button" data-t="light">☀️ Claro</button>
+      <button type="button" data-t="dark">🌙 Oscuro</button>
+    </div>
+    <main>
+      <section id="intro" class="card hero">
+      <div class="big">🧭🤔✨</div>
+      <h1>
+        ¿Querés una ayuda para definir tu futuro?
+        <small>(spoiler: nadie está muy seguro)</small>
+      </h1>
+      <p>
+        Este test usa el modelo <b>RIASEC</b> del psicólogo John Holland, uno de los más usados del
+        mundo en orientación vocacional. Son 30 preguntas, unos 5 minutos y cero respuestas
+        incorrectas.
+      </p>
+      <p>
+        Respondé con sinceridad: no importa si sos bueno/a en eso ni si da plata. Solo importa si
+        te copa. 😎
+      </p>
+      <p class="note">
+        <b>Aclaración seria:</b> es una herramienta orientativa de autoconocimiento, no un
+        diagnóstico psicológico ni reemplaza a un/a orientador/a vocacional.
+      </p>
+      <p style="margin-top: 18px">
+        <button class="pri" id="start">¡Vamos! 🚀</button>
+        <button id="resume" class="hide">Retomar test anterior</button>
+      </p>
+    </section>
+
+      <section id="quiz" class="card hide">
+        <div class="mu" id="count"></div>
+        <div class="bar"><i id="prog"></i></div>
+        <div class="mu">Sé sincero/a, acá nadie te juzga (mucho):</div>
+        <div class="q" id="qtext"></div>
+        <div class="opts" id="opts"></div>
+        <div class="nav">
+          <button id="back">← Anterior</button
+          ><button id="skipfwd" class="hide">Siguiente →</button>
+        </div>
+      </section>
+
+      <section id="result" class="hide"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
